@@ -116,5 +116,6 @@ class TimeTableController extends Controller
  		$unencodedData=base64_decode($filteredData);
  		$name = time();
  		file_put_contents($name.'.png', $unencodedData);
+ 		return response()->download($name.'.png', 'Timetable.png');
     }
 }

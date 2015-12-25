@@ -24,7 +24,7 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-Route::group(['middleware' => ['web']], function () {
+Route::group(['middleware' => ['web', 'auth']], function () {
     Route::post('/submit', 'TimeTableController@submitResponse');
 	Route::get('/home', 'TimeTableController@home');
 	Route::get('/test', 'TimeTableController@test');
