@@ -19,7 +19,16 @@
 
 <div class="grid-example col s12 l12 m12 center-align"><span class="flow-text">GDG VIT brings you myFFCS</span>
 </div>
-</div>
+
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
        
 
       <div class="row ">
