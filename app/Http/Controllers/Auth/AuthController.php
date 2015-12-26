@@ -49,7 +49,7 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'regno' => 'required|min:6',
+            'regno' => 'required|unique:users|min:6',
             'password' => 'required|min:6',
         ]);
     }
