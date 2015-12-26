@@ -42,14 +42,14 @@ class SlotsTableSeeder extends Seeder
             'start'   =>  800,
             'end' => 850,
             'day' => 3, 
-            'htmlid'  => 4
+            'htmlid'  => 3
         ]);
        DB::table('time_slots')->insert([
             'name' =>  "L13",
             'start'   =>  800,
             'end' => 850,
             'day' => 3, 
-            'htmlid'  => 4
+            'htmlid'  => 3
         ]);
        DB::table('time_slots')->insert([
             'name' =>  "D1",
@@ -168,28 +168,28 @@ class SlotsTableSeeder extends Seeder
             'start'   =>  1000,
             'end' => 1050,
             'day' => 2, 
-            'htmlid'  =>  11
+            'htmlid'  =>  12
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "L9",
             'start'   =>  1000,
             'end' => 1050,
             'day' => 2, 
-            'htmlid'  =>  11
+            'htmlid'  =>  12
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "E1",
             'start'   =>  1000,
             'end' => 1050,
             'day' => 3, 
-            'htmlid'  =>  12
+            'htmlid'  =>  13
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "L15",
             'start'   =>  1000,
             'end' => 1050,
             'day' => 3, 
-            'htmlid'  =>  12
+            'htmlid'  =>  13
 
         ]);
             DB::table('time_slots')->insert([
@@ -197,14 +197,14 @@ class SlotsTableSeeder extends Seeder
             'start'   =>  1000,
             'end' => 1050,
             'day' => 4, 
-            'htmlid'  =>  13
+            'htmlid'  =>  14
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "L21",
             'start'   =>  1000,
             'end' => 1050,
             'day' => 4, 
-            'htmlid'  =>  13
+            'htmlid'  =>  14
         ]);
             
             
@@ -213,7 +213,7 @@ class SlotsTableSeeder extends Seeder
             'start'   =>  1000,
             'end' => 1050,
             'day' => 5, 
-            'htmlid'  =>  14
+            'htmlid'  =>  15
         ]);
             
 
@@ -222,35 +222,35 @@ class SlotsTableSeeder extends Seeder
             'start'   =>  1000,
             'end' => 1050,
             'day' => 5, 
-            'htmlid'  =>  14
+            'htmlid'  =>  15
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "E1",
             'start'   =>  1100,
             'end' => 1150,
             'day' => 1, 
-            'htmlid'  =>  15
+            'htmlid'  =>  16
         ]);
             DB::table('time_slots')->insert([
-            'name' =>  "L4",
+            'name' =>  "L4,"
             'start'   =>  1100,
             'end' => 1150,
             'day' => 1, 
-            'htmlid'  =>  15
+            'htmlid'  =>  16
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "TA1",
             'start'   =>  1100,
             'end' => 1150,
             'day' => 2, 
-            'htmlid'  =>  16
+            'htmlid'  =>  17
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "L10",
             'start'   =>  1100,
             'end' => 1150,
             'day' => 2, 
-            'htmlid'  =>  16
+            'htmlid'  =>  17
         ]);
             DB::table('time_slots')->insert([
             'name' =>  "C1",
