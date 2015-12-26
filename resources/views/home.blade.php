@@ -118,7 +118,7 @@
     {!! Form::close() !!}
 
 
-<a href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! action('TimeTableController@share', ['id', $id]) !!}">Share on Facebook</a>
+<a href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! action('TimeTableController@share', ['id' => 1]) !!}">Share on Facebook</a>
   <div id="target">
 <table class = "highlight">
         <thead>
