@@ -34,7 +34,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 	Route::get('/home', 'TimeTableController@home');
 	Route::get('/test', 'TimeTableController@test');
 	Route::get('/tableinfo', 'TimeTableController@tableinfo');
-
+	Route::post('delete', 'TimeTableController@delete');
 });
 Route::post('/save', 'TimeTableController@save');
 Route::get('/about', 'TimeTableController@about');
