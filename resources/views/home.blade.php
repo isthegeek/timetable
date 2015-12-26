@@ -52,11 +52,15 @@
         </div>
     @endif
     {!! Form::open(array('url' => 'submit', 'class' => 'col s12')) !!}
+       <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Please enter course code" name = "courseCode" id="first_name" type="text" class="validate">
+          <label for="first_name">Course code</label>
+        </div>
+       </div>
+       
         <p>
-        {!! Form::label('courseCode', 'Course Code: ') !!}
-        {!! Form::text('courseCode') !!}
-        </p>
-        <p>
+        
         {!! Form::label('credits', 'Credits for this course: ') !!}
         <div class="input-field col s6">
         <select name = "credits" class="browser-default col s6">
