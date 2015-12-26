@@ -33,6 +33,9 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
 });
 Route::post('/save', 'TimeTableController@save');
+Route::get('/share/{id}', 'TimeTableController@share');
+Route::get('sharetableinfo', 'TimeTableController@sharetableinfo');
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
 });
+

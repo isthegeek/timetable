@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\TimeTableSlot;
 use App\userTimeSlot;
+use App\User;
 
 
 
@@ -74,6 +75,7 @@ class TimeTableController extends Controller
         $userTimeSlot->courseCode = $request->input('courseCode');
         $userTimeSlot->nameofthecourse = $request->input('courseName');
 		$userTimeSlot->save();
+		 return redirect('home');
     }
 
     public function home(){
@@ -82,7 +84,13 @@ class TimeTableController extends Controller
         foreach($timetableslots as $timetableslot){
             $tofill[$timetableslot['name']] =  $timetableslot['name'];
         }
-        return view('home', ['slots' => $tofill]);
+        $user = \Auth::user();
+        $id = $user->id;
+        return view('home', ['id' => $id]);
+    }
+
+    public function share($id){
+        return view('share', ['id' => $id]);
     }
 
     public function test(){
@@ -103,6 +111,18 @@ class TimeTableController extends Controller
     	$user=\Auth::user();
     	$timeslotsaray = array();
     	$existingSlots = $user->usertimeslots;
+    	foreach($existingSlots as $existingSlot){
+    		foreach($existingSlot->timeslots as $timeslot){
+    			array_push($timeslotsaray, $timeslot->htmlid);
+    		}
+    	}
+    	return json_encode($timeslotsaray);
+    }
+
+    public function sharetableinfo(Request $request){
+    	$user=User::where('id', $request->get('id'))->get();
+    	$timeslotsaray = array();
+    	$existingSlots = $user[0]->usertimeslots;
     	foreach($existingSlots as $existingSlot){
     		foreach($existingSlot->timeslots as $timeslot){
     			array_push($timeslotsaray, $timeslot->htmlid);
