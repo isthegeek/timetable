@@ -114,8 +114,10 @@
         </p>
         {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}
     {!! Form::close() !!}
-    
-  <button class="waves-effect waves-light btn">{!!$sum!!} Credits</button>
+    <div class="chip">
+    {!!$sum!!} Credits
+  </div>
+  
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">
@@ -203,7 +205,7 @@
             <td id= "29">L24</td>
             <td class = "blue lighten-5">C</td>
             <td id= "34">D2/L49</td>
-            <td id= "39">A1/L50</td>
+            <td id= "39">A2/L50</td>
             <td id= "44">F2/L51</td>
             <td id= "49">C2/L52</td>
             <td id= "54">TE2/L53</td>
