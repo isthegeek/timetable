@@ -146,7 +146,18 @@
         <a class="waves-effect waves-light btn">{!!$sum!!} Credits</a>
         </div>
     {!! Form::close() !!}
-   
+    <hr /><hr />
+   {!! Form::open(array('url' => 'delete', 'class' => 'col s12')) !!}
+       <div class="row">
+        <div class="input-field col s12">
+          {!! Form::select('slotid', $slots,null ,['class'=>'browser-default col s12']) !!}
+        </div>
+       </div>
+       <br>
+       <div class = "center-align">
+        <button type = "submit" class = "waves-effect waves-light btn center-align">Remove</button>
+        </div>
+    {!! Form::close() !!}
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">

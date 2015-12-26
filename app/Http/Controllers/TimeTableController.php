@@ -89,8 +89,48 @@ class TimeTableController extends Controller
     public function home(){
         $user = \Auth::user();
         $sum = $user->usertimeslots->sum('credits');
+        
+        
+        $slots = array();
+        
+        
+        //Let's find the slots
+        $existingSlots = $user->usertimeslots;
+        //dd($existingSlots);
+        foreach ($existingSlots as $key => $existingSlot) {
+        	$existingSlotId = str_split($existingSlot->slotid);
+        	$a = $existingSlotId[0];
+        	if($a=='A' or $a=='B' or $a=='C' or $a=='D' or $a=='E' or $a=='F' or $a=='G'){
+        		
+        		if(isset($existingSlots[$key + 1])){
+        			$nextSlot = $existingSlots[$key + 1];
+        			$nextSlotId = str_split($nextSlot->slotid);
+        			if($nextSlotId[0] == 'T' and $nextSlot->credits==0){
+        				//a1+ta1
+        				$slots[$existingSlot->slotid.'+'.$nextSlot->slotid] = $existingSlot->slotid.'+'.$nextSlot->slotid;
+        			}else{
+        				//a1
+        				$slots[$existingSlot->slotid] = $existingSlot->slotid;
+        			}
+        		}else{
+        			$slots[$existingSlot->slotid] = $existingSlot->slotid;
+        		}
+        		
+        	}elseif($a=='L'){
+        		if(isset($existingSlots[$key + 1])){
+        			$nextSlot = $existingSlots[$key + 1];
+        			$nextSlotId = str_split($nextSlot->slotid);
+        			if($nextSlotId[0] == 'L' and $nextSlot->credits==0){
+        				//a1+ta1
+        				$slots[$existingSlot->slotid.'-'.$nextSlot->slotid] = $existingSlot->slotid.'-'.$nextSlot->slotid;
+        			}
+        		}
+        	}
+        }
+        //dd($slots);
+        //die();
         $id = $user->id;
-        return view('home', ['id' => $id, 'sum'=>$sum]);
+        return view('home', ['id' => $id, 'sum'=>$sum, 'slots'=>$slots]);
     }
 
     public function about(){
@@ -153,5 +193,19 @@ class TimeTableController extends Controller
  		$name = time();
  		file_put_contents($name.'.png', $unencodedData);
  		return response()->download($name.'.png', 'Timetable.png');
+    }
+
+    public function delete(Request $request){
+    	$slotid = $request->input('slotid');
+		$userId = \Auth::id();
+		$slotsToBeAddedtemp = str_replace("+","-",$request->input('slotid') );
+		$slotsToBeAddedtemp = explode("-",$slotsToBeAddedtemp );
+		if(count($slotsToBeAddedtemp) == 2){
+			$model = userTimeSlot::where('userid', $userId)->where('slotid', $slotsToBeAddedtemp[0])->delete();
+			$model = userTimeSlot::where('userid', $userId)->where('slotid', $slotsToBeAddedtemp[1])->delete();
+		}else{
+			$model = userTimeSlot::where('userid', $userId)->where('slotid', $slotsToBeAddedtemp[0])->delete();
+		}
+		return redirect('home');
     }
 }
