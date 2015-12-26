@@ -88,8 +88,6 @@
         <option value="L9-L10">L9-L10</option>
         <option value="L11-L12">L11-L12</option>
         <option value="L13-L14">L13-L14</option>
-        <option value="L15-L16">L15-L16</option>
-        <option value="L17-L18">L17-L18</option>
         <option value="L19-L20">L19-L20</option>
         <option value="L21-L22">L21-L22</option>
         <option value="L23-L24">L23-L24</option>
