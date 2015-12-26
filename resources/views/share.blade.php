@@ -7,6 +7,20 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <meta http-equiv="refresh" content="1 day">
+      <meta name="description" content="VIT - FFCS Timetable. Hey, I just used myFFCS to build my timetable. You can check my timetable here. Create yours at www.myffcs.in ">
+      <meta name="keywords" content="VIT,FFCS, Timetable, VIT UNIVERSITY, GDG,GDG VIT, VELLORE, COURSE ALLOCATION">
+      <meta name="distribution" content="web">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+       <meta name="language" content="en-us">
+       <meta name="distribution" content="Global" />
+        <meta property="og:title" content="myFFCS- Create your timetable before FFCS">
+    <meta property="og:site_name" content="myFFCS ">
+    <meta property="og:url" content="https://www.myffcs.in">
+    <meta property="og:description" content="VIT - FFCS Timetable. Hey, I just used myFFCS to build my timetable. You can check my timetable here. Create yours at www.myffcs.in ">
+      <meta name="author" content="Ashwini Purohit, Vijay Nandwani">
     </head>
 
     <body>

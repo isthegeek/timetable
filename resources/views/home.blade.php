@@ -1,4 +1,5 @@
 <html>
+    <title>myFFCS-An initiative by GDG-VIT</title>
     <head>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -6,7 +7,26 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <!--Let browser know website is optimized for mobile-->
+      <style type="text/css">
+  
+  li span {
+  color: red; /* text color */
+}
+</style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <meta http-equiv="refresh" content="1 day">
+      <meta name="description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it ">
+      <meta name="keywords" content="VIT,FFCS, Timetable, VIT UNIVERSITY, GDG,GDG VIT, VELLORE, COURSE ALLOCATION">
+      <meta name="distribution" content="web">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+       <meta name="language" content="en-us">
+       <meta name="distribution" content="Global" />
+        <meta property="og:title" content="myFFCS- Create your timetable before FFCS">
+    <meta property="og:site_name" content="myFFCS ">
+    <meta property="og:url" content="https://www.myffcs.in">
+    <meta property="og:description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it">
+      <meta name="author" content="Ashwini Purohit, Vijay Nandwani">
     </head>
 
     <body>
@@ -26,7 +46,7 @@
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                    <li><span>{{ $error }}</span></li>
                 @endforeach
             </ul>
         </div>
@@ -112,10 +132,15 @@
 
       </select></div>
         </p>
-        {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}
+        
+       </div>
+       <br>
+       <div class = "center-align">
+        <button type = "submit" class = "waves-effect waves-light btn center-align">Register</button>
+        <a class="waves-effect waves-light btn">{!!$sum!!} Credits</a>
+        </div>
     {!! Form::close() !!}
-    
-  <button class="waves-effect waves-light btn">{!!$sum!!} Credits</button>
+   
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">
@@ -203,7 +228,7 @@
             <td id= "29">L24</td>
             <td class = "blue lighten-5">C</td>
             <td id= "34">D2/L49</td>
-            <td id= "39">A1/L50</td>
+            <td id= "39">A2/L50</td>
             <td id= "44">F2/L51</td>
             <td id= "49">C2/L52</td>
             <td id= "54">TE2/L53</td>
