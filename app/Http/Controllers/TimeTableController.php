@@ -26,7 +26,13 @@ class TimeTableController extends Controller
         ]);
 		$user = \Auth::user();
 		$existingCredits = 0;
-		$slotsToBeAdded = TimeTableSlot::where('name', $request->input('courseSlot'))->get();
+		$slotsToBeAddedtemp = str_replace("+","-",$request->input('courseSlot') );
+		$slotsToBeAddedtemp = explode("-",$slotsToBeAddedtemp );
+		if(count($slotsToBeAddedtemp) == 2){
+			$slotsToBeAdded = TimeTableSlot::where('name', $slotsToBeAddedtemp[0])->orWhere('name', $slotsToBeAddedtemp[1])->get();
+		}else{
+			$slotsToBeAdded = TimeTableSlot::where('name', $slotsToBeAddedtemp[0])->get();
+		}
 		$existingSlots = $user->usertimeslots;
 		$this->isClashing = 0;
 		$this->creditsMore = 0;
@@ -67,14 +73,16 @@ class TimeTableController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
-
-        $userTimeSlot = new userTimeSlot;
+        foreach ($slotsToBeAddedtemp as $value) {
+        	$userTimeSlot = new userTimeSlot;
         $userTimeSlot->userid = $user->id;
         $userTimeSlot->credits = $request->input('credits');
-        $userTimeSlot->slotid = $request->input('courseSlot');
+        $userTimeSlot->slotid = $value;
         $userTimeSlot->courseCode = $request->input('courseCode');
         $userTimeSlot->nameofthecourse = $request->input('courseName');
 		$userTimeSlot->save();
+        }
+        
 		 return redirect('home');
     }
 
