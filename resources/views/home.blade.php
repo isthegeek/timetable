@@ -272,6 +272,16 @@
       <li><a class="btn-floating blue" onclick="share();"><i class="fa fa-facebook"></i></a></li>
     </ul>
   </div>
+   <footer class="page-footer">
+          <div class="container">
+           
+          <div class="footer-copyright">
+            <div class="container">
+            Feel free to contribute. By : GDG VIT VELLORE
+           </div>
+            </div>
+          </div>
+        </footer>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
