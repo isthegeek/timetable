@@ -15,7 +15,7 @@
 </style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta charset="UTF-8">
-      <meta http-equiv="refresh" content="30">
+      <meta http-equiv="refresh" content="1 day">
       <meta name="description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it ">
       <meta name="keywords" content="VIT,FFCS, Timetable, VIT UNIVERSITY, GDG,GDG VIT, VELLORE, COURSE ALLOCATION">
       <meta name="distribution" content="web">
