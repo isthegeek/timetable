@@ -1,4 +1,5 @@
 <html>
+    <title>myFFCS-An initiative by GDG-VIT</title>
     <head>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,6 +14,19 @@
 }
 </style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <meta http-equiv="refresh" content="30">
+      <meta name="description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it ">
+      <meta name="keywords" content="VIT,FFCS, Timetable, VIT UNIVERSITY, GDG,GDG VIT, VELLORE, COURSE ALLOCATION">
+      <meta name="distribution" content="web">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+       <meta name="language" content="en-us">
+       <meta name="distribution" content="Global" />
+        <meta property="og:title" content="myFFCS- Create your timetable before FFCS">
+    <meta property="og:site_name" content="myFFCS ">
+    <meta property="og:url" content="https://www.myffcs.in">
+    <meta property="og:description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it">
+      <meta name="author" content="Ashwini Purohit, Vijay Nandwani">
     </head>
 
     <body>
