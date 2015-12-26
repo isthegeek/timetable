@@ -136,7 +136,7 @@
        </div>
        <br>
        <div class = "center-align">
-        {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn center-align')) !!}
+        <button type = "submit" class = "waves-effect waves-light btn center-align">Register</button>
         <a class="waves-effect waves-light btn">{!!$sum!!} Credits</a>
         </div>
     {!! Form::close() !!}
