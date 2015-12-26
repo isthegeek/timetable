@@ -18,8 +18,6 @@
         
 <br>
 <div class="row">
-     
-<a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Flocalhost%2Flaravel%2Ftimetable%2Fpublic%2Fhome&app_id=481083698767151&display=popup&href={!! action('TimeTableController@share', ['id', $id]) !!}">Share on Facebook</a>
   <div id="target">
 <table class = "highlight">
         <thead>
@@ -140,7 +138,6 @@
     </a>
     <ul>
       <li><a class="btn-floating green" onclick="capture();"><i class="fa fa-download"></i></a></li>
-      <li><a class="btn-floating blue" onclick="share();"><i class="fa fa-facebook"></i></a></li>
     </ul>
   </div>
       <!--Import jQuery before materialize.js-->
@@ -170,12 +167,6 @@
                             document.getElementById("myForm").submit();
                         }
                     });
-                }
-            </script>
-
-            <script type="text/javascript">
-                function share() {
-                    $('#share')[0].click();
                 }
             </script>
     </body>
