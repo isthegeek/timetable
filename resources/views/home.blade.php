@@ -117,7 +117,7 @@
     
   <button class="waves-effect waves-light btn">{!!$sum!!} Credits</button>
 
-<a href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
+<a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">
 <table class = "highlight">
         <thead>
@@ -270,6 +270,12 @@
                             document.getElementById("myForm").submit();
                         }
                     });
+                }
+            </script>
+
+            <script type="text/javascript">
+                function share() {
+                    $('#share')[0].click();
                 }
             </script>
 
