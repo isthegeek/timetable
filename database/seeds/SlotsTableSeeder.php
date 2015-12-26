@@ -232,7 +232,7 @@ class SlotsTableSeeder extends Seeder
             'htmlid'  =>  16
         ]);
             DB::table('time_slots')->insert([
-            'name' =>  "L4,"
+            'name' =>  "L4",
             'start'   =>  1100,
             'end' => 1150,
             'day' => 1, 
