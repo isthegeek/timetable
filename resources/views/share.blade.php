@@ -129,7 +129,7 @@
         </tbody>
       </table>
       </div>
-        <form method="POST" enctype="multipart/form-data" action="save" id="myForm">
+        <form method="POST" enctype="multipart/form-data" action={!!action('TimeTableController@save')!!} id="myForm">
                     <input type="hidden" name="img_val" id="img_val" value="" />
                 </form>
       <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
