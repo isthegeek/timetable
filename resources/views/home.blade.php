@@ -116,11 +116,11 @@
         <div class="row">
      <div class="col s6"> {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}</div>
    
-      <div class="col s6">{!!$sum!!} Credits</div>
+      <div class="col s6"><a class="btn-floating btn-large waves-effect waves-light blue right-align">{!!$sum!!}</a>
+  </div>
        </div>
         {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}
     {!! Form::close() !!}
-  <a class="btn-floating btn-large waves-effect waves-light red" align="middle">{!!$sum!!}</a>
   
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
