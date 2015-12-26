@@ -12,7 +12,7 @@
     <body>
 <nav>
     <div class="nav-wrapper">
-      <a href="myffcs.in" class="brand-logo center">myFFCS</a>
+      <a href="http://www.myffcs.in" class="brand-logo center">myFFCS</a>
     </div>
   </nav>
         
@@ -153,7 +153,9 @@
             $(document).ready(function(){
                 $.get( "{!! action('TimeTableController@sharetableinfo') !!}", {'id': {!! $id !!},'_token': $('input[name=_token]').val() },function( data ) {
                     $.each($.parseJSON(data), function( index, value ) {
-                      $('#'+value).addClass('green');
+                      $('#'+value[1]).addClass('green');
+                      $('#'+value[1]).prepend(value[0]+"(");
+                      $('#'+value[1]).append(")");
                     });
                 });
             });

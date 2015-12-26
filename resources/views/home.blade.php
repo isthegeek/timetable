@@ -12,7 +12,7 @@
     <body>
 <nav>
     <div class="nav-wrapper">
-      <a href="myffcs.in" class="brand-logo center">myFFCS</a>
+      <a href="http://www.myffcs.in" class="brand-logo center">myFFCS</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href={!!action('TimeTableController@about')!!}>About</a></li>
         <li><a href={!!action('Auth\AuthController@logout')!!}>Logout</a></li>
@@ -252,8 +252,7 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $.get( "tableinfo", {'_token': $('input[name=_token]').val() },function( data ) {
-                  console.log(data);
-                    $.each($.parseJSON(data), function( index, value ) {
+                   $.each($.parseJSON(data), function( index, value ) {
                       $('#'+value[1]).addClass('green');
                       $('#'+value[1]).prepend(value[0]+"(");
                       $('#'+value[1]).append(")");

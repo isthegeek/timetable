@@ -136,8 +136,12 @@ class TimeTableController extends Controller
     	$timeslotsaray = array();
     	$existingSlots = $user[0]->usertimeslots;
     	foreach($existingSlots as $existingSlot){
+    		$courseCode = $existingSlot->courseCode;
     		foreach($existingSlot->timeslots as $timeslot){
-    			array_push($timeslotsaray, $timeslot->htmlid);
+    			$temp = array();
+    			array_push($temp, $courseCode);
+    			array_push($temp, $timeslot->htmlid);
+    			array_push($timeslotsaray, $temp);
     		}
     	}
     	return json_encode($timeslotsaray);
