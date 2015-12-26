@@ -115,7 +115,9 @@
         
        </div>
        <br>
+       <div class = "center-align">
         {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn center-align')) !!}
+        </div>
     {!! Form::close() !!}
 <br>
     <a class="btn-floating btn-large waves-effect waves-light blue right">{!!$sum!!}</a>
