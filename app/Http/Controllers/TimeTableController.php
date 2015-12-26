@@ -20,7 +20,6 @@ class TimeTableController extends Controller
     public function submitResponse(Request $request){
         
 		$validator = Validator::make($request->all(), ['courseCode'=>'required',
-                                   'courseName'=>'required',
                                    'credits'=>'required|numeric',
                                    'courseSlot'=>'required'
         ]);
@@ -79,7 +78,6 @@ class TimeTableController extends Controller
         $userTimeSlot->credits = $request->input('credits');
         $userTimeSlot->slotid = $value;
         $userTimeSlot->courseCode = $request->input('courseCode');
-        $userTimeSlot->nameofthecourse = $request->input('courseName');
 		$userTimeSlot->save();
         }
         

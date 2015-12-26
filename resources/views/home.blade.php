@@ -37,10 +37,6 @@
         {!! Form::text('courseCode') !!}
         </p>
         <p>
-        {!! Form::label('courseName', 'Name of the course: ') !!}
-        {!! Form::text('courseName') !!}
-        </p>
-        <p>
         {!! Form::label('credits', 'Credits for this course: ') !!}
         <div class="input-field col s6">
         <select name = "credits" class="browser-default col s6">

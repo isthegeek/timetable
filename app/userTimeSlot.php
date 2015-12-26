@@ -9,7 +9,7 @@ class userTimeSlot extends Model
 	public $timestamps = false;
 	protected $table = 'time_table';
     protected $fillable = [
-        'userid', 'credits', 'slotid', 'courseCode', 'nameofthecourse'
+        'userid', 'credits', 'slotid', 'courseCode'
     ];
 
     public function user(){
