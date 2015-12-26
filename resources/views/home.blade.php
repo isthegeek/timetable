@@ -252,8 +252,10 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $.get( "tableinfo", {'_token': $('input[name=_token]').val() },function( data ) {
+                  console.log(data);
                     $.each($.parseJSON(data), function( index, value ) {
-                      $('#'+value).addClass('green');
+                      $('#'+value[1]).addClass('green');
+                      $('#'+value[1]).html(value[0]);
                     });
                 });
             });
