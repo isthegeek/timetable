@@ -316,7 +316,7 @@
                  data-ad-client="ca-pub-1192143571859738"
                  data-ad-slot="8088037006"
                  data-ad-format="auto"></ins>
-            <script>
+          
                             <script>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -327,7 +327,5 @@
                   ga('send', 'pageview');
                 
                 </script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
     </body>
   </html>
