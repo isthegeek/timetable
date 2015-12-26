@@ -97,6 +97,10 @@ class TimeTableController extends Controller
         return view('home', ['id' => $id]);
     }
 
+    public function about(){
+    	return view('about');
+    }
+
     public function share($id){
         return view('share', ['id' => $id]);
     }

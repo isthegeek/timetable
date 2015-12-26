@@ -13,6 +13,10 @@
 <nav>
     <div class="nav-wrapper">
       <a href="myffcs.in" class="brand-logo center">myFFCS</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href={!!action('TimeTableController@about')!!}>About</a></li>
+        <li><a href={!!action('Auth\AuthController@logout')!!}>Logout</a></li>
+      </ul>
     </div>
   </nav>
         

@@ -19,7 +19,6 @@ Route::get('/', ['middleware' => ['web'], function () {
 }]);
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -38,6 +37,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
 });
 Route::post('/save', 'TimeTableController@save');
+Route::get('/about', 'TimeTableController@about');
 Route::get('/share/{id}', 'TimeTableController@share');
 Route::get('sharetableinfo', 'TimeTableController@sharetableinfo');
 Route::group(['middleware' => 'web'], function () {
