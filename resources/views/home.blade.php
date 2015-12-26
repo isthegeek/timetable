@@ -14,19 +14,21 @@
 }
 </style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta charset="UTF-8">
-      <meta http-equiv="refresh" content="1 day">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <meta name="distribution" content="Global" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days"/>
+    <meta name="copyright" content="GDG VIT Vellore"/>
       <meta name="description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it ">
       <meta name="keywords" content="VIT,FFCS, Timetable, VIT UNIVERSITY, GDG,GDG VIT, VELLORE, COURSE ALLOCATION">
       <meta name="distribution" content="web">
       <meta name="apple-mobile-web-app-capable" content="yes">
        <meta name="language" content="en-us">
-       <meta name="distribution" content="Global" />
-        <meta property="og:title" content="myFFCS- Create your timetable before FFCS">
-    <meta property="og:site_name" content="myFFCS ">
-    <meta property="og:url" content="https://www.myffcs.in">
+        <meta property="og:title" content="MyFFCS- Create your timetable before FFCS">
+    <meta property="og:site_name" content="MyFFCS ">
+    <meta property="og:url" content="http://www.myffcs.in">
     <meta property="og:description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it">
-      <meta name="author" content="Ashwini Purohit, Vijay Nandwani">
+
     </head>
 
     <body>
