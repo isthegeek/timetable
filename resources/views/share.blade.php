@@ -145,6 +145,7 @@
       <script type="text/javascript" src="{{ asset('js/materialize.min.js') }}"></script>
        <script type="text/javascript" src="{{ asset('js/html2canvas.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/jquery.plugin.html2canvas.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/google.js') }}"></script>
 
         <script type="text/javascript">
             $(document).ready(function(){

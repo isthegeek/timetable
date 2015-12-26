@@ -278,6 +278,6 @@
                     $('#share')[0].click();
                 }
             </script>
-
+            <script type="text/javascript" src="{{ asset('js/google.js') }}"></script>
     </body>
   </html>
