@@ -255,7 +255,8 @@
                   console.log(data);
                     $.each($.parseJSON(data), function( index, value ) {
                       $('#'+value[1]).addClass('green');
-                      $('#'+value[1]).html(value[0]);
+                      $('#'+value[1]).prepend(value[0]+"(");
+                      $('#'+value[1]).append(")");
                     });
                 });
             });
