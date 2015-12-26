@@ -72,10 +72,12 @@ class TimeTableController extends Controller
                         ->withErrors($validator)
                         ->withInput();
         }
+        $credits = $request->input('credits');
         foreach ($slotsToBeAddedtemp as $value) {
         	$userTimeSlot = new userTimeSlot;
         $userTimeSlot->userid = $user->id;
-        $userTimeSlot->credits = $request->input('credits');
+        $userTimeSlot->credits = $credits;
+        $credits = 0;
         $userTimeSlot->slotid = $value;
         $userTimeSlot->courseCode = $request->input('courseCode');
 		$userTimeSlot->save();
@@ -85,14 +87,10 @@ class TimeTableController extends Controller
     }
 
     public function home(){
-    	$timetableslots = TimeTableSlot::all();
-        $tofill = array();
-        foreach($timetableslots as $timetableslot){
-            $tofill[$timetableslot['name']] =  $timetableslot['name'];
-        }
         $user = \Auth::user();
+        $sum = $user->usertimeslots->sum('credits');
         $id = $user->id;
-        return view('home', ['id' => $id]);
+        return view('home', ['id' => $id, 'sum'=>$sum]);
     }
 
     public function about(){

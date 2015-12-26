@@ -115,7 +115,7 @@
         {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}
     {!! Form::close() !!}
     
-  <button class="waves-effect waves-light btn">25 Credits</button>
+  <button class="waves-effect waves-light btn">{!!$sum!!} Credits</button>
 
 <a href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">
