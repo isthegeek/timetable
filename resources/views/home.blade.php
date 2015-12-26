@@ -112,6 +112,12 @@
 
       </select></div>
         </p>
+        
+        <div class="row">
+     <div class="col s6"> {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}</div>
+   
+      <div class="col s6">{!!$sum!!} Credits</div>
+       </div>
         {!! Form::submit('Register', array('class'=>'waves-effect waves-light btn')) !!}
     {!! Form::close() !!}
   <a class="btn-floating btn-large waves-effect waves-light red" align="middle">{!!$sum!!}</a>
