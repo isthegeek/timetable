@@ -6,6 +6,12 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <!--Let browser know website is optimized for mobile-->
+      <style type="text/css">
+  
+  li span {
+  color: red; /* text color */
+}
+</style>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
@@ -26,7 +32,7 @@
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
+                    <li><span>{{ $error }}</span></li>
                 @endforeach
             </ul>
         </div>
