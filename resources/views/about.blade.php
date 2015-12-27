@@ -54,6 +54,8 @@
             <ul>
               <li><a href="https://github.com/ashwini0529">Ashwini Purohit</a></li>
               <li><a href="https://github.com/isthegeek">Vijay Nandwani</a></li>
+              <li><a href="https://github.com/rishiraj824">Rishi Raj</a></li>
+              
             </ul>
             </div>
             
@@ -75,16 +77,7 @@
   ga('send', 'pageview');
 
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- GDG VIT FFCS -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1192143571859738"
-     data-ad-slot="8088037006"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
     </body>
   </html>
         
