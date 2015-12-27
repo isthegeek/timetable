@@ -28,6 +28,43 @@
     <meta property="og:site_name" content="MyFFCS ">
     <meta property="og:url" content="http://www.myffcs.in">
     <meta property="og:description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<style type="text/css">
+  body{
+      background: #fcfcfc !important;
+  }
+  h5{
+    color:#757575;
+  }
+  td, th {
+  vertical-align: top;
+  border-top: 1px solid #ccc;
+  padding:10px;
+  width:150px;
+}
+th {  
+  left:0; 
+  width:150px;
+}
+  table {
+  table-layout: fixed !important; 
+  width: 100% !important;
+  
+}
+.outer {position:relative !important}
+.inner {
+  overflow-x:scroll !important;
+  overflow-y:visible !important;
+  width:100% !important; 
+}
+  </style>
+  <script type="text/javascript">
+       $(".button-collapse").sideNav();
+  </script>
 
     </head>
 
@@ -35,15 +72,25 @@
 <nav>
     <div class="nav-wrapper">
       <a href="http://www.myffcs.in" class="brand-logo center">myFFCS</a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href={!!action('TimeTableController@about')!!}>About</a></li>
         <li><a href={!!action('Auth\AuthController@logout')!!}>Logout</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href={!!action('TimeTableController@about')!!}>About</a></li>
+        <li><a href={!!action('Auth\AuthController@logout')!!}>Logout</a></li>s
       </ul>
     </div>
   </nav>
         
 <br>
+<div class="container">
+
 <div class="row">
+
+        <div class="col s12 m12 l12">
+          <div class="card">
      @if (count($errors) > 0)
         <div class="alert alert-danger">
             <ul>
@@ -55,7 +102,7 @@
     @endif
     {!! Form::open(array('url' => 'submit', 'class' => 'col s12')) !!}
        <div class="row">
-        <div class="input-field col s6">
+        <div class="input-field col s12">
           <input placeholder="Please enter course code" name = "courseCode" id="first_name" type="text" class="validate">
           <label for="first_name">Course code</label>
         </div>
@@ -64,8 +111,8 @@
         <p>
         
         {!! Form::label('credits', 'Credits for this course: ') !!}
-        <div class="input-field col s6">
-        <select name = "credits" class="browser-default col s6">
+        <div class="input-field col s12">
+        <select name = "credits" class="browser-default col s12">
         <option value="" disabled selected>Select Credits</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -77,8 +124,8 @@
         </p>
         <p>
         {!! Form::label('courseSlot', 'Please Select Slot: ') !!}
-        <div class="input-field col s6">
-        <select name = "courseSlot" class="browser-default col s6">
+        <div class="input-field col s12">
+        <select name = "courseSlot" class="browser-default col s12">
         <option value="" disabled selected>Choose Slot</option>
         <option value="A1">A1</option>
         <option value="A2">A2</option>
@@ -139,14 +186,14 @@
       </select></div>
         </p>
         
-       </div>
+
        <br>
        <div class = "center-align">
-        <button type = "submit" class = "waves-effect waves-light btn center-align">Register</button>&nbsp;&nbsp;
-        <a class="waves-effect waves-light btn">{!!$sum!!} Credits</a>
+        <button type = "submit" class = "waves-effect waves-light btn center-align light-blue darken-4">Register</button>&nbsp;&nbsp;
+        <a class="waves-effect waves-light btn light-blue darken-4">{!!$sum!!} Credits</a>
         </div>
     {!! Form::close() !!}
-    <hr /><hr />
+    <hr />
    {!! Form::open(array('url' => 'delete', 'class' => 'col s12')) !!}
        <div class="row">
         <div class="input-field col s12">
@@ -155,13 +202,18 @@
        </div>
        <br>
        <div class = "center-align">
-        <button type = "submit" class = "waves-effect waves-light btn center-align">Remove</button>
+        <button type = "submit" class = "waves-effect waves-light btn center-align light-blue darken-4">Remove</button>
         </div>
     {!! Form::close() !!}
+    </div>
+       </div>
+       </div  >
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
-  <div id="target">
-<table class = "highlight">
+  <div id="target container">
+  <div class="outer">
+  <div class="inner">
+    <table class = "highlight">
         <thead>
           <tr>
               <th class = "indigo lighten-5"  data-field="id">Days/Hours</th>
@@ -185,7 +237,7 @@
         <tbody>
           <tr>
           
-            <td  class = "indigo lighten-5">Monday</td>
+            <td  class = "indigo lighten-5">M</td>
             <td id= "1">A1/L1</td>
             <td id= "6">F1/L2</td>
             <td id= "11">C1/L3</td>
@@ -203,7 +255,7 @@
          
           </tr>
           <tr>
-          <td id = "5" class = "indigo lighten-5">Tuesday</td> 
+          <td id = "5" class = "indigo lighten-5">T</td> 
             <td id= "2">B1/L7</td>
             <td id= "7">G1/L8</td>
             <td id= "12" >D1/L9</td>
@@ -219,7 +271,7 @@
             <td id= "57">L42</td>
           </tr>
           <tr>
-            <td class = "indigo lighten-5">Wednesday</td>
+            <td class = "indigo lighten-5">W</td>
             <td id= "3">C1/L13</td>
             <td id= "8">F1/L14</td>
             <td id= "13">E1/L15</td>
@@ -236,7 +288,7 @@
           </tr>
 
           <tr>
-            <td class = "indigo lighten-5">Thursday</td>
+            <td class = "indigo lighten-5">T</td>
             <td id= "4">D1/L19</td>
             <td id= "9">A1/L20</td>
             <td id= "14">F1/L21</td>
@@ -253,7 +305,7 @@
           </tr>
 
           <tr>
-            <td class = "indigo lighten-5">Friday</td>
+            <td class = "indigo lighten-5">F</td>
             <td id= "5">E1/L25</td>
             <td id= "10">B1/L26</td>
             <td id= "15">G1/L27</td>
@@ -277,14 +329,19 @@
                     <input type="hidden" name="img_val" id="img_val" value="" />
                 </form>
       <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 45px; right: 24px;">
-    <a class="btn-floating btn-large red">
+    <a class="btn-floating btn-large light-blue darken-4">
       <i class="large mdi-navigation-menu"></i>
     </a>
     <ul>
-      <li><a class="btn-floating green" onclick="capture();"><i class="fa fa-download"></i></a></li>
-      <li><a class="btn-floating blue" onclick="share();"><i class="fa fa-facebook"></i></a></li>
+      <li><a class="btn-floating light-blue darken-4" onclick="capture();"><i class="fa fa-download"></i></a></li>
+      <li><a class="btn-floating light-blue darken-4" onclick="share();"><i class="fa fa-facebook"></i></a></li>
     </ul>
   </div>
+  </div>
+    
+  </div>
+  </div>
+
           
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -322,7 +379,7 @@
                 }
             </script>
             
-<script>
+<!--<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -333,7 +390,7 @@
 
 </script>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- GDG VIT FFCS -->
+<!-- GDG VIT FFCS 
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-1192143571859738"
@@ -341,6 +398,6 @@
      data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script>-->
     </body>
   </html>
