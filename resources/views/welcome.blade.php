@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="col m12">
                             <p class="right-align">
-                                <button class="btn btn-large waves-effect waves-light  light-blue darken-4" type="button" 
+                                <button type = "submit" class="btn btn-large waves-effect waves-light  light-blue darken-4" type="button" 
                                 onclick="this.parentNode.parentNode.parentNode.submit()">Submit</button>
                             </p>
                         </div>
@@ -105,7 +105,7 @@
                     <div class="row">
                         <div class="col m12">
                             <p class="right-align">
-                                <button class="btn btn-large waves-effect waves-light  light-blue darken-4" type="button"
+                                <button class="btn btn-large waves-effect waves-light  light-blue darken-4" type="submit"
                                 onclick="this.parentNode.parentNode.parentNode.submit()">Login</button>
                             </p>
                         </div>
