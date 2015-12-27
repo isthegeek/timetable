@@ -28,7 +28,7 @@
     <meta property="og:site_name" content="MyFFCS ">
     <meta property="og:url" content="http://www.myffcs.in">
     <meta property="og:description" content="VIT - FFCS Timetable. Create your timetable and experience the FFCS process before FFCS. Share it">
-<!--    
+
 <style type="text/css">
   body{
       background: #fcfcfc !important;
@@ -58,7 +58,7 @@ th {
   width:100% !important; 
 }
   </style>
-  -->
+  
   <script type="text/javascript">
        $(".button-collapse").sideNav();
   </script>
