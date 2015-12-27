@@ -161,7 +161,7 @@
 
 <a id="share" style="display:none" href="https://www.facebook.com/dialog/share?redirect_uri=http%3A%2F%2Ftimetable.cloudapp.net%2Fhome&app_id=481083698767151&display=popup&href={!! url('share', [$id]);!!}">Share on Facebook</a>
   <div id="target">
-<table class = "responsive-table">
+<table class = "highlight ">
         <thead>
           <tr>
               <th class = "indigo lighten-5"  data-field="id">Days/Hours</th>
