@@ -210,9 +210,7 @@ th {
 
   <div id="target container">
   <div class="outer">
-  
-    <table class = "highlight">
-  <div id="target">
+  <div class="inner">
 <table class = "highlight ">
         <thead>
           <tr>
@@ -337,7 +335,7 @@ th {
       <li><a class="btn-floating light-blue darken-4" onclick="share();"><i class="fa fa-facebook"></i></a></li>
     </ul>
   </div>
-  
+  </div>
     
   </div>
   </div>
