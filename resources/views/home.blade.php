@@ -331,7 +331,7 @@ th {
       <i class="large mdi-navigation-menu"></i>
     </a>
     <ul>
-      <li><a class="btn-floating light-blue darken-4" onclick="capture();"><i class="fa fa-download"></i></a></li>
+      <li><a class="btn-floating light-blue darken-4" href="{!! url('share', [$id]);!!}"><i class="fa fa-download"></i></a></li>
       <li><a class="btn-floating light-blue darken-4" onclick="share();"><i class="fa fa-facebook"></i></a></li>
     </ul>
   </div>
