@@ -253,7 +253,7 @@ th {
          
           </tr>
           <tr>
-          <td id = "5" class = "indigo lighten-5">T</td> 
+          <td class = "indigo lighten-5">T</td> 
             <td id= "2">B1/L7</td>
             <td id= "7">G1/L8</td>
             <td id= "12" >D1/L9</td>
